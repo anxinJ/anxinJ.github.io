@@ -63,3 +63,5 @@ chmod 774 /var/packages/transmission/target/share/transmission/web/* -R
 ---
 
 参考：[https://boriskp.github.io/transmission300-294/](https://boriskp.github.io/transmission300-294/)
+
+<gitalk/>

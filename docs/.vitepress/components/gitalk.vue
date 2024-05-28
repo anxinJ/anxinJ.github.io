@@ -17,8 +17,8 @@ export default {
       clientID: "Ov23liD0UhqemUuxieyV",
       clientSecret: "3bb44dbe37c13da4a5f41e636b73adc2a8e616ba",
       repo: "anxinJ.github.io",
-      owner: "Kaiann",
-      admin: ["Kaiann"],
+      owner: "anxinJ",
+      admin: ["anxinJ"],
       id: md5(location.pathname),
       distractionFreeMode: false,
     }
