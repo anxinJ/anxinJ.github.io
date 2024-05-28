@@ -19,24 +19,7 @@ export default defineConfig({
    // head设置
    head: [
     // 浏览器中图标
-    ["link", {rel: "icon", href: "/logo.ico"}],
-    // 添加统计代码
-    // ['script', {},
-    // `
-    //   var _hmt = _hmt || [];
-    //   (function() {
-    //     var hm = document.createElement("script");
-    //     hm.src = "https://hm.baidu.com/hm.js?9b77e13b749eb16bfaad0e97179ca700";
-    //     var s = document.getElementsByTagName("script")[0]; 
-    //     s.parentNode.insertBefore(hm, s);
-    //   })();
-    //   (function(c,l,a,r,i,t,y){
-    //       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    //       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    //       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    //   })(window, document, "clarity", "script", "jud16drf49");
-    // `
-    // ]
+    ["link", {rel: "icon", href: "/logo.ico"}]
   ],
   themeConfig: {
     logo: '/logo.png',
