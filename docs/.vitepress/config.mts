@@ -55,7 +55,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
-              { text: 'transmission4 降级到3', link: '/nas/transmission4 降级到3' },
+              { text: 'transmission4降级到3', link: '/nas/transmission4降级到3' },
               { text: 'dockercompose常用命令', link: '/docker/dockercompose常用命令'}
             ]
           }
