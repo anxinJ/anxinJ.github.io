@@ -26,8 +26,9 @@ export default defineConfig({
     // 首页右上角导航栏
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Blog', link: '/aboutme' },
-      { text: '图床', link: 'https://img.kaian.de' }
+      { text: 'Blog📝', link: '/aboutme' },
+      { text: '图床🖼️', link: 'https://img.kaian.de' },
+      { text: '小鸡🐤', link: 'https://vps.kaian.de' },
     ],
     // 文章左侧导航栏
     sidebar: [
