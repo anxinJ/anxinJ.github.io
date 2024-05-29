@@ -29,6 +29,7 @@ export default defineConfig({
       { text: 'Blog📝', link: '/aboutme' },
       { text: '图床🖼️', link: 'https://img.kaian.de' },
       { text: '小鸡🐤', link: 'https://vps.kaian.de' },
+      { text: '短链🔗', link: 'https://s.kaian.de' },
     ],
     // 文章左侧导航栏
     sidebar: [
