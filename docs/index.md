@@ -5,9 +5,9 @@ hero:
   name: "Kaiann"
   # text: "Hello World"
   tagline: "Talk is cheap,show me the code"
-  # image:
-  #       src: /logo.png
-  #       alt: Kaiann
+  image:
+        src: /logo.png
+        alt: Kaiann
   actions:
     - theme: brand
       text: Blog📝
