@@ -18,9 +18,9 @@ features:
     details: 有事滴滴
     link: https://t.me/vvvein1
   - title: 图床🖼️
-    details: 来试试吧
+    details: 来试试吧(套CF)
     link: https://img.kaian.de
   - title: 小鸡🐤
-    details: 来看看吧
+    details: 来看看吧(套CF)
     link: https://vps.kaian.de
 ---
