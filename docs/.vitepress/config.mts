@@ -40,6 +40,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
+              { text: '备忘-一键修改root密码脚本[转]', link: '/memo/备忘-一键修改root密码脚本[转]' },
               { text: '网段解释byChatGPT4o', link: '/memo/网段解释byChatGPT4o' },
               { text: 'transmission4降级到3', link: '/nas/transmission4降级到3' },
               { text: 'dockercompose常用命令', link: '/docker/dockercompose常用命令'},
