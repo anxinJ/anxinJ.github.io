@@ -16,9 +16,9 @@ docker-compose ps
 
 docker-compose logs
 
-### 构建或
+### 构建或者重新构建服务
 
-docker-compose build者重新构建服务
+docker-compose build
 
 ### 启动服务
 

@@ -7,4 +7,6 @@ wget -q root.sh https://raw.githubusercontent.com/passeway/root/main/root.sh && 
 
 脚本会修改SSH服务器的配置文件以允许root用户登录和使用密码进行身份验证，并重启SSH服务以应用更改。
 
+---
+
 [原文](https://www.nodeseek.com/post-114963-1)
