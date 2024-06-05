@@ -1,6 +1,6 @@
 
 
-# 融合怪测试
+## 融合怪测试
 
 ```shell
 curl -L https://gitlab.com/spiritysdx/za/-/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh
@@ -10,25 +10,25 @@ curl -L https://github.com/spiritLHLS/ecs/raw/main/ecs.sh -o ecs.sh && chmod +x 
 bash <(wget -qO- bash.spiritlhl.net/ecs)
 ```
 
-# 三网回程
+## 三网回程
 
 ```shell
 curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
 ```
 
-# 流媒体解锁检测
+## 流媒体解锁检测
 
 ```shell
 bash <(curl -L -s check.unlock.media)
 ```
 
-# ChatGPT解锁检测
+## ChatGPT解锁检测
 
 ```shell
 wget -O chat.sh https://raw.githubusercontent.com/Netflixxp/chatGPT/main/chat.sh && chmod +x chat.sh && clear && ./chat.sh
 ```
 
-# bbr
+## bbr
 
 ```shell
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
@@ -40,13 +40,13 @@ wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 sysctl net.ipv4.tcp_congestion_control
 ```
 
-# fail2ban
+## fail2ban
 
 ```shell
 wget https://raw.githubusercontent.com/FunctionClub/Fail2ban/master/fail2ban.sh && bash fail2ban.sh 2>&1 | tee fail2ban.log
 ```
 
-# 修改root密码
+## 修改root密码
 
 ```
 wget -q root.sh https://raw.githubusercontent.com/passeway/root/main/root.sh && chmod +x root.sh && ./root.sh
@@ -58,19 +58,19 @@ wget -q root.sh https://raw.githubusercontent.com/passeway/root/main/root.sh && 
 
 脚本会修改SSH服务器的配置文件以允许root用户登录和使用密码进行身份验证，并重启SSH服务以应用更改。
 
-# docker安装
+## docker安装
 
 ```shell
 curl -sSL https://get.docker.com/ | sh
 ```
 
-# docker-compose安装
+## docker-compose安装
 
 ```shell
 curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 ```
 
-# xxx
+## xxx
 
 安装
 
@@ -94,7 +94,7 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 
 
 
-# seedbox安装（杰佬）
+## seedbox安装（杰佬）
 
 ```shell
 bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) -u <用戶名稱> -p <密碼> -c <緩存大小(單位:MiB)> -q -l -b -v -r -3 -x -o
@@ -120,7 +120,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/ma
 
 
 
-# qBittorrent 进种暂停后自动恢复
+## qBittorrent 进种暂停后自动恢复
 
 ```shell
 bash <(wget -qO- https://raw.githubusercontent.com/ours1505/qBittorrentAutoResume/master/main.sh)
@@ -158,7 +158,7 @@ vim /opt/qBittorrentAutoResume/config.ini
 
 
 
-# 流量监控
+## 流量监控
 
 安装脚本
 
