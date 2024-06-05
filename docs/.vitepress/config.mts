@@ -40,6 +40,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
+              { text: 'VPS线路', link: '/vps/VPS线路' },
               { text: 'VPS搭建及检测脚本汇总', link: '/vps/VPS搭建及检测脚本汇总' },
               { text: '备忘-rss', link: '/memo/备忘-rss' },
               { text: 'ptpp备份到群晖webdav', link: '/nas/ptpp备份到群晖webdav' },
