@@ -1,8 +1,6 @@
 
 
-# VPS搭建及检测脚本汇总
-
-## 融合怪测试
+# 融合怪测试
 
 ```shell
 curl -L https://gitlab.com/spiritysdx/za/-/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh
@@ -24,7 +22,7 @@ curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sS
 bash <(curl -L -s check.unlock.media)
 ```
 
-## ChatGPT解锁检测
+# ChatGPT解锁检测
 
 ```shell
 wget -O chat.sh https://raw.githubusercontent.com/Netflixxp/chatGPT/main/chat.sh && chmod +x chat.sh && clear && ./chat.sh
