@@ -1,6 +1,8 @@
 # acme证书管理
 
-## 安装acme
+## Linux acme
+
+### 安装acme
 
 ```shell
 curl https://get.acme.sh | sh -s email=my@example.com
@@ -8,11 +10,11 @@ curl https://get.acme.sh | sh -s email=my@example.com
 
 安装位置：`~/.acme.sh/`
 
-## 生成证书
+### 生成证书
 
 **acme.sh** 实现了 **acme** 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.
 
-### 1. http 方式需要在你的网站根目录下放置一个文件, 来验证你的域名所有权,完成验证. 然后就可以生成证书了.（采用）
+#### 1. http 方式需要在你的网站根目录下放置一个文件, 来验证你的域名所有权,完成验证. 然后就可以生成证书了.（采用）
 
 ```
 acme.sh --issue -d mydomain.com -d www.mydomain.com --webroot /home/wwwroot/mydomain.com/
@@ -50,7 +52,7 @@ acme.sh脚本默认ca服务器是zerossl，经常出错，会导致获取证书�
 acme.sh --set-default-ca --server letsencrypt
 ```
 
-### 2. 手动 dns 方式, 手动在域名上添加一条 txt 解析记录, 验证域名所有权.
+#### 2. 手动 dns 方式, 手动在域名上添加一条 txt 解析记录, 验证域名所有权.
 
 这种方式的好处是, 你不需要任何服务器, 不需要任何公网 ip, 只需要 dns 的解析记录即可完成验证. 坏处是，如果不同时配置 Automatic DNS API，使用这种方式 acme.sh 将无法自动更新证书，每次都需要手动再次重新解析验证域名所有权。
 
@@ -90,7 +92,7 @@ acme.sh --issue --dns dns_dp -d aa.com -d www.aa.com
 acme.sh --issue -d mydomain2.com --dns  dns_dp
 ```
 
-### 3. copy/安装 证书
+#### 3. copy/安装 证书
 
 前面证书生成以后, 接下来需要把证书 copy 到真正需要用它的地方.
 
@@ -123,7 +125,7 @@ Nginx 的配置 `ssl_certificate` 使用 `/etc/nginx/ssl/fullchain.cer` ，而�
 
 `--install-cert`命令可以携带很多参数, 来指定目标文件. 并且可以指定 reloadcmd, 当证书更新以后, reloadcmd会被自动调用,让服务器生效.
 
-### 4. 查看已安装证书信息
+#### 4. 查看已安装证书信息
 
 ```
 acme.sh --info -d example.com
@@ -131,7 +133,7 @@ acme.sh --info -d example.com
 
 
 
-### 5.更新证书
+#### 5.更新证书
 
 目前证书在 60 天以后会自动更新, 你无需任何操作. 今后有可能会缩短这个时间, 不过都是自动的, 你不用关心.
 
@@ -143,9 +145,7 @@ crontab  -l
 56 * * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
 ```
 
-### 6. 更新 acme.sh
-
-
+#### 6. 更新 acme.sh
 
 目前由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步.
 
@@ -157,3 +157,69 @@ acme.sh --upgrade
 
 
 
+## 群晖acme
+
+### 安装
+
+```shell
+sudo su
+# 按需调整位置
+cd ~ 
+wget https://github.com/acmesh-official/acme.sh/archive/master.tar.gz
+tar xvf master.tar.gz
+cd acme.sh-master/
+./acme.sh --install --nocron --home /usr/local/share/acme.sh --accountemail "email@gmailcom"
+source ~/.profile
+```
+
+### 配置CloudFlare DNS
+
+设置两个环境变量，acme.sh将读取这些变量以设置 DNS 记录。
+
+```shell
+# 域名-概述-右下角
+export CF_Key="MY_SECRET_KEY_SUCH_SECRET"
+export CF_Email="myemail@example.com"
+```
+
+如果生成了 API 令牌，可以改为设置 CF_Token，而不是使用全局帐户密钥。
+
+```docker
+export CF_Token="MY_SECRET_TOKEN_SUCH_SECRET"
+export CF_Email="myemail@example.com"
+```
+
+### 创建证书
+
+为域名创建证书：
+
+```docker
+# These commands assume you are still working in the same terminal and have ran necessary commands described above.
+
+cd /usr/local/share/acme.sh
+export CERT_DOMAIN="your-domain"
+export CERT_DNS="dns_cf"
+./acme.sh --issue --server letsencrypt --home . -d "$CERT_DOMAIN" --dns "$CERT_DNS"
+```
+
+### 部署默认证书
+
+（推荐）使用自动创建的临时管理员用户进行部署
+
+```shell
+export SYNO_USE_TEMP_ADMIN=1
+./acme.sh --deploy --home . -d "$CERT_DOMAIN" --deploy-hook synology_dsm
+```
+
+### 配置证书续订
+
+在 DSM 控制面板中，打开“任务计划程序”并为用户定义的脚本创建一个新的计划任务。
+
+常规设置：任务 - UpdateCert。 用户 - root
+计划：设置每周续订。例如，每周六上午 7：00。
+任务设置：用户定义的脚本：
+
+```docker
+# renew certificates 
+./acme.sh --cron --home .
+```
