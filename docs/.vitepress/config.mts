@@ -40,6 +40,8 @@ export default defineConfig({
           {
             text: '2024',
             items: [
+              { text: 'cloudflare worker搭建Docker镜像', link: '/docker/cloudflareworker搭建Docker镜像' },
+              { text: 'acme证书管理', link: '/memo/acme证书管理' },
               { text: 'VPS线路', link: '/vps/VPS线路' },
               { text: 'VPS搭建及检测脚本汇总', link: '/vps/VPS搭建及检测脚本汇总' },
               { text: '备忘-rss', link: '/memo/备忘-rss' },
