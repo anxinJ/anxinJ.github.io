@@ -184,7 +184,7 @@ export CF_Email="myemail@example.com"
 
 如果生成了 API 令牌，可以改为设置 CF_Token，而不是使用全局帐户密钥。
 
-```docker
+```shell
 export CF_Token="MY_SECRET_TOKEN_SUCH_SECRET"
 export CF_Email="myemail@example.com"
 ```
@@ -193,7 +193,7 @@ export CF_Email="myemail@example.com"
 
 为域名创建证书：
 
-```docker
+```shell
 # These commands assume you are still working in the same terminal and have ran necessary commands described above.
 
 cd /usr/local/share/acme.sh

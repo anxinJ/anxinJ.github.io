@@ -2,7 +2,7 @@
 
 使用方法：docker pull abc.com/mysql/mysql-server
 
-worker代码
+worker代码（**替换workers_url**）
 
 ```js
 'use strict'
