@@ -40,6 +40,8 @@ export default defineConfig({
           {
             text: '2024',
             items: [
+              { text: 'MoviePilot-二级分类', link: '/nas/MoviePilot-二级分类' },
+              { text: 'Emby增加弹幕', link: '/nas/Emby增加弹幕' },
               { text: 'cloudflare worker搭建Docker镜像', link: '/docker/cloudflareworker搭建Docker镜像' },
               { text: 'acme证书管理', link: '/memo/acme证书管理' },
               { text: 'VPS线路', link: '/vps/VPS线路' },
