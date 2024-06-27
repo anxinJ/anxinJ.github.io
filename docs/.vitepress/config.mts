@@ -40,6 +40,7 @@ export default defineConfig({
           {
             text: '2024',
             items: [
+              { text: 'FileBrowser部署', link: '/vps/FileBrowser部署' },
               { text: 'vps如何手动挂载硬盘', link: '/vps/vps如何手动挂载硬盘' },
               { text: 'MoviePilot-二级分类', link: '/nas/MoviePilot-二级分类' },
               { text: 'Emby增加弹幕', link: '/nas/Emby增加弹幕' },
