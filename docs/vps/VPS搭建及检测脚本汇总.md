@@ -28,6 +28,19 @@ bash <(curl -L -s check.unlock.media)
 wget -O chat.sh https://raw.githubusercontent.com/Netflixxp/chatGPT/main/chat.sh && chmod +x chat.sh && clear && ./chat.sh
 ```
 
+## 测速
+
+```shell
+# 全球
+curl -sL network-speed.xyz | bash
+# 亚洲
+curl -sL network-speed.xyz | bash -s -- -r asia
+# 国内
+curl -sL network-speed.xyz | bash
+```
+
+
+
 ## bbr
 
 ```shell
